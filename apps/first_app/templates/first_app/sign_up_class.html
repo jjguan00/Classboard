@@ -1,0 +1,10 @@
+<a href="/main">Home</a> <a href="/logout">Log Out</a><br><br>
+
+{{class.title}}<br>
+{{class.desc}}<br>
+Taught By {{class.instructor.last_name}},{{class.instructor.first_name}}<br>
+
+<form action="/signup_classes/{{class.id}}" method="POST">
+	{% csrf_token%}
+	<input type="submit" value= "Sign Up">
+</form>

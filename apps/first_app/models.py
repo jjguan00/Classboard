@@ -76,7 +76,7 @@ class User(models.Model):
 	first_name = models.CharField(max_length = 36)
 	last_name = models.CharField(max_length = 36)
 	email = models.CharField(max_length = 100)
-	password = models.CharField(max_length = 36)
+	password = models.CharField(max_length = 100)
 	educator = models.BooleanField()
 	created_at = models.DateTimeField(auto_now_add = True)
 	updated_at = models.DateTimeField(auto_now = True)

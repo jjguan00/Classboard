@@ -83,7 +83,7 @@ class User(models.Model):
 	objects = UserManager()
 
 class Class(models.Model):
-	title = models.CharField(max_length = 35)
+	title = models.CharField(max_length = 100)
 	desc = models.TextField(max_length = 500)
 	instructor = models.ForeignKey(User,on_delete= "DO_NOTHING", related_name="teach_classes")
 	students = models.ManyToManyField(User,related_name="take_classes")

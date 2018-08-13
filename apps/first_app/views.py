@@ -19,7 +19,7 @@ def signups(request):
 	if request.method == "POST":
 		errors = User.objects.sign_up_validator(request.POST)
 		if len(errors):
-			for tag,value in errors.iteritems():
+			for tag,value in errors.items():
 				messages.error(request, value,extra_tags=tag)
 				print(tag,value)
 			return redirect('/login')
@@ -39,7 +39,7 @@ def logins(request):
 	if request.method == "POST":
 		errors = User.objects.log_in_validator(request.POST)
 		if len(errors):
-			for tag,value in errors.iteritems():
+			for tag,value in errors.items():
 				messages.error(request, value,extra_tags=tag)
 				print(tag,value)
 			return redirect('/login')

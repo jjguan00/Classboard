@@ -1,1 +1,1 @@
-web: gunicorn classboard:app
+web: gunicorn classboard.wsgi
